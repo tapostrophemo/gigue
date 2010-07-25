@@ -1,0 +1,154 @@
+/* resets */
+html {
+  font-size: 62.5%;
+}
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* colors
+ * http://www.colorjack.com/?swatch=000033,000055,333366,333300,555500,666633,DD9999,CCBB99
+ *                                  dk blu  blue  lt blu dk grn olive  drab g  pink   tan
+ */
+
+body {
+  background: #ffffff url(bg.png) top left repeat-x;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000033;
+}
+p, input {
+  color: #424242;
+}
+a {
+  color: #333366;
+}
+strike {
+  color: #9a9aac;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+}
+h1 { font-size: 2.7em }
+h2 { font-size: 1.7em }
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#header {
+  margin: 2em auto 3em auto;
+}
+#header a {
+  text-decoration: none;
+}
+#header h1 {
+  line-height: 100%;
+  width: 500px;
+  margin: auto 10px auto 10px;
+  display: block;
+  float: left;
+}
+#header h1 span {
+  display: block;
+  font-size: 55%;
+  margin: 0.5em 0 0 1.5em;
+}
+#header ul {
+  width: 420px;
+  margin: auto 10px auto 10px;
+  display: block;
+  float: right;
+  list-style: none;
+}
+#header li {
+  display: block;
+  float: left;
+  width: 105px;
+}
+#header ul li a {
+  font: bold 1.2em/2.3em Arial, Helvetica, sans-serif;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+#header ul li a:hover {
+  color: white;
+  background-color: #666633;
+}
+
+#content {
+  font: normal 1.4em/1.6em Arial, Helvetica, sans-serif;
+  padding: 0 10px 0 10px;
+}
+#content p {
+  margin: 0 0 1.5em 0;
+}
+
+#boxContainer {
+  margin: 40px 0 50px 0;
+}
+.box {
+  width: 460px;
+  height: 120px;
+  margin: 0 10px 0 10px;
+  float: left;
+}
+.box h2 {
+  margin-bottom: 5px;
+}
+.box p {
+  font: normal 1.2em/1.4em Arial, Helvetica, sans-serif;
+  margin-bottom: 9px;
+}
+#participate {
+  background: transparent url(docs.png) top left no-repeat;
+}
+#participate h2, #participate p {
+  margin-left: 96px;
+}
+#notify {
+  background: transparent url(email.png) top left no-repeat;
+}
+#notify h2, #notify p, #notify form {
+  margin-left: 105px;
+}
+#notify form {
+  position: relative;
+  width: 322px;
+  height: 43px;
+  margin: 20px auto auto 69px;
+  background: transparent url(signupForm.png) top left no-repeat;
+}
+#notify form #email {
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 18px;
+  width: 209px;
+}
+#notify form #submit {
+  position: absolute;
+  top: 8px;
+  left: 225px;
+}
+
+#footer {
+  margin-top: 2.5em;
+  border-top: 1px dashed #000033;
+  padding: 25px 10px 0 10px;
+  text-align: center;
+}
+#footer p {
+  font: normal 0.87em Arial, Helvetica, sans-serif;
+}
+
