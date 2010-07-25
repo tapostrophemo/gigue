@@ -1,7 +1,7 @@
 package org.demo.controllers;
 
 import org.gigue.Controller;
-import org.gigue.Gigue;
+import org.gigue.GigueUtil;
 import org.demo.Guestbook;
 
 public class Site extends Controller {
@@ -14,7 +14,7 @@ public class Site extends Controller {
 	}
 
 	public void index() {
-		this.load.view("guestList", Gigue.array("guests", guestbook.getGuests()));
+		this.load.view("guestList", GigueUtil.array("guests", guestbook.getGuests()));
 	}
 
 	public void signGuestbook() {
