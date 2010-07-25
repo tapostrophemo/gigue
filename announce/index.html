@@ -6,16 +6,17 @@
 <meta name="keywords" content="java, web development, lightweight, framework"/>
 <title>Gigue - A Java Web Development Framework</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-<link rel="stylesheet" type="text/css" href="gigue.css"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/gigue/gigue.css"/>
 </head>
 <body>
 
 <div id="container">
 
 <div id="header">
- <h1><a href="#">Gigue <span>A Java Web Development Framework</a></span></h1>
+ <h1><a href="/">Gigue <span>A Java Web Development Framework</a></span></h1>
  <ul>
-  <li><a href="#">Home</a></li>
+  <li><a href="/">Home</a></li>
   <li><a href="#">Downloads</a></li>
   <li><a href="#">Documentation</a></li>
   <li><a href="#">Contact</a></li>
@@ -32,16 +33,20 @@
 <div id="boxContainer">
  <div class="box" id="participate">
   <h2>Contribute</h2>
-  <p>Would you like contribute to Gigue by sharing your code, technical writing, design, or project management skills?</p>
+  <p>Would you like contribute to Gigue by sharing your programming, technical writing, design, or project management skills?</p>
   <p>If so, please <a href="#">contact</a> us.</p>
   <p>We also glady accept donations:<br/>(Pay Pal)<!-- TODO: setup PayPal donation link/image --></p>
  </div>
  <div class="box" id="notify">
   <h2>Mailing List</h2>
   <p>Interested in using Gigue? Would you like to be notified when major releases are made?</p>
-  <form>
+  <form action="/webformmailer.php" method="post">
+   <input type="hidden" name="subject" value="Gigue Mailing List"/>
+   <input type="hidden" name="redirect" value="signedup.html"/>
+   <input type="hidden" name="form_delivery" value="daily_digest"/>
+   <input type="hidden" name="form_format" value="csv"/>
    <input type="text" name="email" id="email"/>
-   <input type="image" name="submit" id="submit" value="Signup" src="signup.png"/>
+   <input type="image" id="submit" value="Signup" src="signup.png"/>
   </form>
  </div>
  <div style="clear:both"></div>
