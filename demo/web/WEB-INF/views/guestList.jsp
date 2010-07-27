@@ -1,4 +1,4 @@
-<%@page%>
+<%@page import="org.gigue.*,org.demo.*,java.util.List"%>
 <html>
 <head>
 <title>Guest List</title>
@@ -8,11 +8,10 @@
 <h1>Guest List</h1>
 
 <%
-for (List<Gigue.DbResultRow> guests : guest) {
+for (List<DbResultRow> guest : guests) {
 	println(guest.name + "<br>");
 }
 %>
 
 </body>
 </html>
-

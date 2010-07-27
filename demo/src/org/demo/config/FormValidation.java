@@ -1,13 +1,12 @@
 package org.demo.config;
 
-import org.gigue.FormValidationBase;
-import org.gigue.Form;
+import org.gigue.framework.Form;
+import org.gigue.framework.FormValidationBase;
 
 public class FormValidation extends FormValidationBase {
 
 	public void signGuestbook(Form form) {
-//		form.field("name").label("name").actionTrim().ruleRequired().ruleMaxLength(50);
-//		form.field("comments").label("comments").actionTrim();
+		form.field("name", "Name").trim().required().maxLength(50);
+		form.field("comments", "Comments").trim();
 	}
 }
-

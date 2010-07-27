@@ -1,7 +1,8 @@
 package org.demo.controllers;
 
 import org.demo.models.Guestbook;
-import org.gigue.Controller;
+import org.gigue.framework.Controller;
+import org.gigue.util.GigueUtil;
 
 public class Site extends Controller {
 
@@ -13,18 +14,17 @@ public class Site extends Controller {
 	}
 
 	public void index() {
-//		this.load.view("guestList", GigueUtil.array("guests", guestbook.getGuests()));
+		this.load.view("guestList", GigueUtil.map("guests", guestbook.getGuests()));
 	}
 
 	public void signGuestbook() {
-//		if (!this.formValidation().run("signGuestbook")) {
-//			this.load.view("guestbookForm");
-//		} else {
-//			guestbook.saveSignature(this.input.post("name"), this.input.post("comments"));
+		if (!this.formValidation.run("signGuestbook")) {
+			this.load.view("guestbookForm");
+		} else {
+			guestbook.saveSignature((String) this.input.post("name"), (String) this.input.post("comments"));
 			guestbook.saveSignature("name", "comments");
-//			this.session.setFlashdata("message", "Thanks for signing the guestbook.");
-//			redirect();
-//		}
+			this.session.setFlashdata("message", "Thanks for signing the guestbook.");
+			redirect();
+		}
 	}
 }
-

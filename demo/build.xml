@@ -1,0 +1,32 @@
+<project name="demo" default="dist" basedir=".">
+	<target name="clean">
+		<delete dir="dist"/>
+	</target>
+	
+	<target name="compile">
+		<javac srcdir="src" destdir="build"/>
+	</target>
+	
+	<target name="dist" depends="clean,compile">
+		<mkdir dir="dist"/>
+		<copy todir="dist/web/">
+			<fileset dir="web">
+			    <include name="**/*"/>
+			</fileset>
+		</copy>
+		<copy todir="dist/web/WEB-INF/classes">
+			<fileset dir="build">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+		<war destfile="dist/gigue_demo.war" basedir="dist/web"/>
+	</target>
+	
+	<target name="war.deploy" depends="dist">
+		<copy todir="/home/djp/install/tomcat/webapps">
+			<fileset dir="dist">
+				<include name="gigue_demo.war"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

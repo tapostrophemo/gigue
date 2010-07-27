@@ -1,0 +1,14 @@
+<project name="gigue" default="dist" basedir=".">
+	<target name="clean">
+		<delete dir="dist"/>
+	</target>
+	
+	<target name="compile">
+		<javac srcdir="src" destdir="build"/>
+	</target>
+	
+	<target name="dist" depends="clean,compile">
+		<mkdir dir="dist"/>
+		<jar jarfile="dist/gigue.jar" basedir="build"/>
+	</target>
+</project>

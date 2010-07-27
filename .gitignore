@@ -1,7 +1,8 @@
 siteDesignEvolution.xcf
 announce/webformmailer.php
 .metadata
-demo/.classpath
-demo/.project
-demo/.settings/
+Servers
 demo/build/
+demo/dist/
+gigue/build/
+gigue/dist/

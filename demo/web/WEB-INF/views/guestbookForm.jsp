@@ -1,4 +1,4 @@
-<%@page%>
+<%@page import="org.gigue.*,org.demo.*"%>
 <html>
 <head>
 <title>Sign the Guestbook</title>
@@ -7,7 +7,7 @@
 
 <h1>Sign the Guestbook</h1>
 
-<%= Gigue.form.formOpen("/sign"); %>
+<%= Gigue.form.open("/sign") %>
  <label>Your name:</label> <input type="text" name="name">
  <br>
  <label>Comments</label>
@@ -19,4 +19,3 @@
 
 </body>
 </html>
-
