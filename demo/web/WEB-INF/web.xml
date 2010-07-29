@@ -6,28 +6,21 @@
 	<display-name>Gigue Demo Application</display-name>
 	<description>A simple application highlighting how to use the Gigue Web Development Framework</description>
 	
-	<!-- NOTE: fill in params below if you need them for your application
-	<context-param>
-		<param-name></param-name>
-		<param-value></param-value>
-		<description></description>
-		
-		<param-name></param-name>
-		<param-value></param-value>
-		<description></description>
-		
-		...
-	</context-param>
-	-->
-	
+	<!-- REQUIRED: set org.gigue.web.FrontController as your servlet -->
 	<servlet>
 		<servlet-name>gigue_front_controller</servlet-name>
 		<description>entry point for all requests into a gigue-based web application</description>
 		<servlet-class>org.gigue.web.FrontController</servlet-class>
+		<!-- REQUIRED: tell Gigue where to look for your application -->
+		<init-param>
+			<param-name>application.package</param-name>
+			<param-value>org.demo</param-value>
+		</init-param>
 	</servlet>
 
+	<!-- REQUIRED: let Gigue handle all requests -->
 	<servlet-mapping>
 		<servlet-name>gigue_front_controller</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 </web-app>

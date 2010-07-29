@@ -1,13 +1,23 @@
 <project name="gigue" default="dist" basedir=".">
+	<path id="deps.path">
+		<fileset dir="lib" includes="*.jar"/>
+	</path>
+	
 	<target name="clean">
 		<delete dir="dist"/>
+		<delete dir="build"/>
+	</target>
+	
+	<target name="init">
+		<mkdir dir="dist"/>
+		<mkdir dir="build"/>
 	</target>
 	
 	<target name="compile">
-		<javac srcdir="src" destdir="build"/>
+		<javac srcdir="src" destdir="build" classpathref="deps.path" debug="true" debuglevel="source,lines"/>
 	</target>
 	
-	<target name="dist" depends="clean,compile">
+	<target name="dist" depends="clean,init,compile">
 		<mkdir dir="dist"/>
 		<jar jarfile="dist/gigue.jar" basedir="build"/>
 	</target>
