@@ -84,12 +84,39 @@ h2 { font-size: 1.7em }
   background-color: #666633;
 }
 
-#content {
+h2 {
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+#content, #sidebar {
   font: normal 1.4em/1.6em Arial, Helvetica, sans-serif;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
 }
 #content p {
   margin: 0 0 1.5em 0;
+}
+#content ul, #content ol, #sidebar ul, #sidebar ol {
+  margin-left: 10px;
+}
+
+#container.doc #content {
+  float: left;
+  width: 720px;
+}
+#container.doc #sidebar {
+  float: left;
+  margin-top: -30px;
+  width: 180px;
+}
+
+#sidebar a {
+  font-size: 95%;
+  font-weight: bold;
+  text-decoration: none;
+}
+#sidebar a:hover {
+  text-decoration: underline;
 }
 
 #boxContainer {
@@ -102,6 +129,7 @@ h2 { font-size: 1.7em }
   float: left;
 }
 .box h2 {
+  padding: 0;
   margin-bottom: 5px;
 }
 .box p {
